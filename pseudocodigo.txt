@@ -1,0 +1,12 @@
+var medicamentosSi = true
+var medicamentosNo = false
+
+si medicamentosSi == true
+    formulario.disable = true
+sino
+    formulario.disable = false
+
+
+//
+var medicamento = false
+

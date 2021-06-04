@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tu salud</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col" id="nameUser">
+                <h2 id="userChild"></h2>
+            </div>
+        </div>
+        <ul id="listTrackeo">
+            <li id="listTrackeoChild"></li>
+        </ul>
+        <div class="contenedor">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                id="btncarga">
+                <strong>ADD</strong>
+            </button>
+            <!--***MODAL***-->
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Completa con los valores</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container presion" id="content-presion">
+                                <label for="presion">
+                                    <h5>Presion</h5>
+                                </label>
+                                <input class="form-control" type="text" id="presion" placeholder="Ingresar valor">
+                            </div>
+                            <div class="container presion" id="content-glucemia">
+                                <label for="glucemia">
+                                    <h5>Glucemia</h5>
+                                </label>
+                                <input class="form-control" type="text" id="glucemia" placeholder="Ingresar valor">
+                            </div>
+                            <div class="container">
+                                <h5 id="tituloMedicina">Medicinas</h5>
+                            </div>
+                            <div id="radiovalid">
+                                <div class="container" id="contentRadio">
+                                    <label class="form-check-label" for="defaultCheck">
+                                        <span id="medicine"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="loadValue">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="./js/listatrackeo.js"></script>
+</body>
+
+</html>

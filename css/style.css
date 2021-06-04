@@ -1,0 +1,149 @@
+/***Media Query***/
+@media only screen and (max-width: 1024px) {
+  body {
+    background-color: rgba(48, 68, 78, 0.9);
+    box-sizing: border-box;
+    width: 100%vh;
+    color: #fff;
+  }
+  /** Header **/
+  header {
+    height: 60px;
+    margin: 10px;
+    width: 100%;
+  }
+  .navbarmain,
+  .navbarmain__elements {
+    float: right;
+    align-self: center;
+    justify-content: flex-end;
+  }
+
+  .navbarmain,
+  .navbarmain__elements,
+  .navbarmain__li {
+    display: inline-block;
+  }
+  .navbarmain__li {
+    margin: 5px;
+  }
+  .logo__element {
+    width: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  #btnName {
+    margin-top: 10px;
+  }
+
+  /*** Section ***/
+  section {
+    width: 100%;
+    height: 506px;
+  }
+  .button-main {
+    float: right;
+    margin-top: 10px;
+  }
+  .button-main__glucemia {
+    margin-right: 130px;
+  }
+  .button-main__presion {
+    margin-right: 144px;
+  }
+  .button-main__medicamentos {
+    margin-right: 92px;
+  }
+  .button-main__child {
+    display: inline-block;
+  }
+  .contador {
+    margin-top: 5px;
+  }
+  .btn-accept {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .btn-accept__element {
+    background-color: green;
+  }
+  .button-main__child {
+    background-color: steelblue;
+  }
+
+  /*** Footer ***/
+  footer {
+    background-color: aliceblue;
+    height: 80px;
+    width: 100%;
+  }
+  q {
+    font-size: 15px;
+  }
+  ul {
+    list-style: none;
+  }
+  .medication-input {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  .number-medicine,
+  .input-medicacion {
+    margin-top: 15px;
+  }
+
+  /**Lista**/
+  #btncarga {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 35px;
+    position: absolute;
+    border: none;
+    right: 0;
+    bottom: 0;
+    box-shadow: 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+      -8px -8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: lightblue;
+}
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+.logo-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70px;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 40%;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: flex-end;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  width: 10%;
+}
