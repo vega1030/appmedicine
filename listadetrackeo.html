@@ -26,6 +26,7 @@
                 id="btncarga">
                 <strong>ADD</strong>
             </button>
+
             <!--***MODAL***-->
 
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -62,12 +63,21 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary" id="loadValue">Guardar</button>
+                            <button type="button" class="btn btn-primary" id="loadValue"
+                                data-bs-dismiss="modal">Guardar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="trackeos">
+        <ul class="list-group" id="presionlista">
+            <li class="list-group-item list-group-item-primary" id="valorPresionContent"></li>
+        </ul>
+        <ul class="list-group" id="glucemialista">
+            <li class="list-group-item list-group-item-primary" id="valorGlucemiaContent"></li>
+        </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"

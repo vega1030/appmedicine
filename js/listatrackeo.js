@@ -4,18 +4,17 @@ let nameUser = document.querySelector('#userChild')
 let nameStorage = document.createTextNode("La lista de  " + localStorage.getItem("User"))
 nameUser.appendChild(nameStorage)
 
-
 let mostrar = localStorage.getItem("medicine")
 let padre = document.querySelector('#list-trackeo')
 let list = document.createElement('li')
 let parseMedicine = (parseInt(localStorage.getItem("medicine")))
 //modal 
+
 let addList = document.querySelector('#btncarga')
 let presion = document.querySelector('#content-presion')
 let glucemia = document.querySelector('#content-glucemia')
 
 //medicines
-
 
 let medicineContent = document.querySelector('#radiovalid')
 let glucemiaVal = localStorage.getItem("glucemiatrue")
@@ -30,16 +29,16 @@ addList.addEventListener('click', () => {
     if (glucemiaVal === "true") {
         glucemia.style.display = "block"
     }
-    else {
-        glucemia.style.display = "none"
-    }
+    // else {
+    //     glucemia.style.display = "none"
+    // }
     //presion Modal
     if (presionVal === "true") {
         presion.style.display = "block"
     }
-    else {
-        presion.style.display = "none"
-    }
+    // else {
+    //     presion.style.display = "none"
+    // }
     if (medicineVal === "true") {
         radioVal.style.display = "block"
         for (i = 0; i < parseMedicine; i++ && medicineVal === "true") {
@@ -62,19 +61,34 @@ addList.addEventListener('click', () => {
         contentRadio.style.display = "none"
         tituloMedicina.style.display = "none"
     }
-
-
 })
+
+const listPresion = document.getElementById('presionlista')
+const glucemialista = document.getElementById('glucemialista')
+
+listPresion.style.display = "none"
+glucemialista.style.display = "none"
 
 let loadButton = document.querySelector('#loadValue').addEventListener('click', () => {
     let glucemiaInput = document.querySelector('#glucemia').value
     let presionInput = document.querySelector('#presion').value
 
-    // let modalClose = document.getElementsByClassName('modal-open')
-    // modalClose.close();
+    //
+
+    let valorPresionContent = document.getElementById('valorPresionContent') //li presion
+    let valorGlucemiaContent = document.getElementById('valorGlucemiaContent')//li glucemia
+
+
+    valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
+    valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput
 
     console.log(presionInput)
     console.log(glucemiaInput)
+    glucemiaInput = 0
+    presionInput = 0
+
+    listPresion.style.display = "block"
+    glucemialista.style.display = "block"
 })
 
 

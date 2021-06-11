@@ -7,6 +7,9 @@
     color: #fff;
   }
   /** Header **/
+  nav {
+    width: 50%;
+  }
   header {
     height: 60px;
     margin: 10px;
