@@ -24,7 +24,10 @@ let radioVal = document.querySelector('#radiovalid')
 let contentRadio = document.querySelector('#contentRadio')
 let tituloMedicina = document.querySelector('#tituloMedicina')
 
+//contents in modal
 
+glucemia.style.display = "none"
+presion.style.display = "none"
 addList.addEventListener('click', () => {
     //glucemia Modal
     if (glucemiaVal === "true") {
@@ -95,9 +98,17 @@ let loadButton = document.querySelector('#loadValue').
         presionInput = 0
 
         //show element list and button save
+        let validatePresionList = localStorage.getItem("presiontrue")
+        let validateGlucemiaList = localStorage.getItem("glucemiatrue")
 
-        listPresion.style.display = "block"
-        glucemialista.style.display = "block"
+        if (validatePresionList === "true") {
+            listPresion.style.display = "block"
+        }
+
+        if (validateGlucemiaList === "true") {
+            glucemialista.style.display = "block"
+        }
+
         saveDates.style.display = "block"
         messageTrack.style.display = "none"
 
@@ -111,7 +122,7 @@ let loadButton = document.querySelector('#loadValue').
 
             console.log(localStorage.getItem("reporteSemanal"))
 
-
+            window.location.path = "/index.html"
         })
     })
 

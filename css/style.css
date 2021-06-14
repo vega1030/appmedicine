@@ -170,3 +170,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
+.list-group {
+  margin: 4% 0 0 0;
+}
