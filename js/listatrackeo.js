@@ -24,6 +24,7 @@ let radioVal = document.querySelector('#radiovalid')
 let contentRadio = document.querySelector('#contentRadio')
 let tituloMedicina = document.querySelector('#tituloMedicina')
 
+
 addList.addEventListener('click', () => {
     //glucemia Modal
     if (glucemiaVal === "true") {
@@ -68,28 +69,51 @@ const glucemialista = document.getElementById('glucemialista')
 
 listPresion.style.display = "none"
 glucemialista.style.display = "none"
+//save dates
 
-let loadButton = document.querySelector('#loadValue').addEventListener('click', () => {
-    let glucemiaInput = document.querySelector('#glucemia').value
-    let presionInput = document.querySelector('#presion').value
-
-    //
-
-    let valorPresionContent = document.getElementById('valorPresionContent') //li presion
-    let valorGlucemiaContent = document.getElementById('valorGlucemiaContent')//li glucemia
+const saveDates = document.getElementById('save_dates')
+saveDates.style.display = "none"
+const messageTrack = document.querySelector('.message')
 
 
-    valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
-    valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput
+let loadButton = document.querySelector('#loadValue').
+    addEventListener('click', () => {
+        console.log(window.location)
+        //dates input
+        let glucemiaInput = document.querySelector('#glucemia').value
+        let presionInput = document.querySelector('#presion').value
 
-    console.log(presionInput)
-    console.log(glucemiaInput)
-    glucemiaInput = 0
-    presionInput = 0
+        //Element lists
 
-    listPresion.style.display = "block"
-    glucemialista.style.display = "block"
-})
+        let valorPresionContent = document.getElementById('valorPresionContent') //li presion
+        let valorGlucemiaContent = document.getElementById('valorGlucemiaContent')//li glucemia
+
+        //Insert dates in element list
+        const dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
+        const dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput
+        glucemiaInput = 0
+        presionInput = 0
+
+        //show element list and button save
+
+        listPresion.style.display = "block"
+        glucemialista.style.display = "block"
+        saveDates.style.display = "block"
+        messageTrack.style.display = "none"
+
+
+        save_dates.addEventListener('click', () => {
+            let reporteSemanal = {
+                dia1: [dia1Glucemia, dia1Presion]
+            }
+
+            localStorage.setItem("reporteSemanal", reporteSemanal.dia1)
+
+            console.log(localStorage.getItem("reporteSemanal"))
+
+
+        })
+    })
 
 
 

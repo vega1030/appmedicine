@@ -95,14 +95,14 @@ accept.addEventListener('click', () => {
             //window.location = ""
             alert('estas en lista medicamentos')
             //chequear redireccion en el deploy
-            window.location.href = "http://127.0.0.1:5500/listamedicacion.html"
+            window.location.pathname = "/listamedicacion.html"
         }
         else {
             validate = "false"
             //window.location = ""
             alert('estas en lista trackeo')
             //chequear redireccion en el deploy
-            window.location.href = "http://127.0.0.1:5500/listadetrackeo.html"
+            window.location.pathname = "/listadetrackeo.html"
         }
     }
 })
