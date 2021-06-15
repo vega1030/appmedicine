@@ -97,7 +97,6 @@ accept.addEventListener('click', () => {
             window.location.pathname = "/listamedicacion.html"
         }
         else {
-            validate = "false"
             alert('estas en lista trackeo')
             //chequear redireccion en el deploy
             window.location.pathname = "/listadetrackeo.html"

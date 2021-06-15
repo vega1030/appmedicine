@@ -78,9 +78,11 @@ const saveDates = document.getElementById('save_dates')
 saveDates.style.display = "none"
 const messageTrack = document.querySelector('.message')
 
+let flagValue = false
 
 let loadButton = document.querySelector('#loadValue').
     addEventListener('click', () => {
+        flagValue = true
         console.log(window.location)
         //dates input
         let glucemiaInput = document.querySelector('#glucemia').value
@@ -100,6 +102,8 @@ let loadButton = document.querySelector('#loadValue').
         //show element list and button save
         let validatePresionList = localStorage.getItem("presiontrue")
         let validateGlucemiaList = localStorage.getItem("glucemiatrue")
+
+        //validate input dates (be like integers and obligatory)
 
         if (validatePresionList === "true") {
             listPresion.style.display = "block"
@@ -121,8 +125,9 @@ let loadButton = document.querySelector('#loadValue').
             localStorage.setItem("reporteSemanal", reporteSemanal.dia1)
 
             console.log(localStorage.getItem("reporteSemanal"))
-
-            window.location.path = "/index.html"
+            if (flagValue === true) {
+                window.location.pathname = "/index.html"
+            }
         })
     })
 
