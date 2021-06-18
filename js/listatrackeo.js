@@ -94,42 +94,75 @@ let loadButton = document.querySelector('#loadValue').
         let valorGlucemiaContent = document.getElementById('valorGlucemiaContent')//li glucemia
 
         //Insert dates in element list
-        const dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
-        const dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput
-        glucemiaInput = 0
-        presionInput = 0
+        const medicine = localStorage.getItem("medicine")
+
 
         //show element list and button save
         let validatePresionList = localStorage.getItem("presiontrue")
         let validateGlucemiaList = localStorage.getItem("glucemiatrue")
 
         //validate input dates (be like integers and obligatory)
+        let dia1Presion = ""
+        let dia1Glucemia = ""
 
-        if (validatePresionList === "true") {
-            listPresion.style.display = "block"
+        switch (validatePresionList) {
+            case "true":
+                if (validatePresionList === validateGlucemiaList) {
+                    dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput;
+                    dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
+                    console.log('confirm')
+                }
+                else {
+                    dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput;
+                    console.log('confirm')
+
+                }
+                break
+            case "false":
+                dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
+                console.log('confirm')
+
+                break
+            default:
+                alert("No hay valor para mostrar")
         }
 
-        if (validateGlucemiaList === "true") {
-            glucemialista.style.display = "block"
-        }
+        // if (validatePresionList === "true" && validateGlucemiaList === "true") {
+        //     const dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput
+        //     const dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
+        //     glucemialista.style.display = "block"
+        //     listPresion.style.display = "block"
+        // }
+
+        //do switch for validate info
 
         saveDates.style.display = "block"
         messageTrack.style.display = "none"
 
+        //SAVE DATES
 
         save_dates.addEventListener('click', () => {
-            let reporteSemanal = {
-                dia1: [dia1Glucemia, dia1Presion]
-            }
+            let reporteSemanal = [
+                dia1 = {
+                    "glucemia": "Valor de glucemia: " + glucemiaInput,
+                    "presion": "Valor de presion" + presionInput,
+                    "medicineValues": {
+                        medicine
+                    }
+                }
 
-            localStorage.setItem("reporteSemanal", reporteSemanal.dia1)
 
-            console.log(localStorage.getItem("reporteSemanal"))
+            ]
+
+            localStorage.setItem("reporteSemanal", JSON.stringify(reporteSemanal))
             if (flagValue === true) {
                 window.location.pathname = "/index.html"
             }
         })
     })
+
+
+
 
 
 

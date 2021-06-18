@@ -69,38 +69,52 @@ select.addEventListener('change', () => {
     localStorage.setItem("medicine", medicine)
     console.log(localStorage.getItem("medicine"))
 })
+let contentRecord = document.querySelector('.historytracks')
+
+if (localStorage.getItem('reporteSemanal') === null) {
+    accept.addEventListener('click', () => {
 
 
+        let name = input.value
 
-//redireccion a htmls
-accept.addEventListener('click', () => {
+        localStorage.setItem("User", name)
 
+        //validation form input
 
-    let name = input.value
+        let validate = localStorage.getItem("medicinetrue")
 
-    localStorage.setItem("User", name)
-
-    //validation form input
-
-
-    let validate = localStorage.getItem("medicinetrue")
-
-    console.log(validate)
-
-    if (name === "") {
-        alert('Debes colocar tu nombre')
-        window.location.pathname = "/index.html"
-    } else {
-        if (validate === "true") {
-            alert('estas en lista medicamentos')
-            //chequear redireccion en el deploy
-            window.location.pathname = "/listamedicacion.html"
+        if (name === "") {
+            alert('Debes colocar tu nombre').preventDefault()
+            window.location.pathname = "/index.html"
+        } else {
+            if (validate === "true") {
+                alert('estas en lista medicamentos')
+                //chequear redireccion en el deploy
+                window.location.pathname = "/listamedicacion.html"
+            }
+            else {
+                alert('estas en lista trackeo')
+                //chequear redireccion en el deploy
+                window.location.pathname = "/listadetrackeo.html"
+            }
         }
-        else {
-            alert('estas en lista trackeo')
-            //chequear redireccion en el deploy
-            window.location.pathname = "/listadetrackeo.html"
-        }
+    })
+}
+else {
+    let trackInfo = localStorage.getItem("reporteSemanal")
+    trackInfo = JSON.parse(trackInfo)
+    console.log(trackInfo.length)
+    for (i = 0; i < trackInfo.length; i++) {
+
+        let { dia1 } = trackInfo
+
+        console.log(dia1)
+
+        let tagTitle = document.createElement('h4')
+        tagTitle.innerHTML = 'Dia ' + JSON.stringify(trackInfo.length)
+        let tagH4 = contentRecord.appendChild(tagTitle)
+
+        console.log(tagH4)
     }
-})
+}
 

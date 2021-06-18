@@ -1,0 +1,5 @@
+numbers of medicine is integer
+
+inputs names string, and colors
+
+medicine send dates in package.json or javascript package (colors and names) 
