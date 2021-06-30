@@ -36,54 +36,67 @@
         </nav>
     </header>
     <section class="container-fluid">
-        <div class="align-content-center">
-            <div class="col-12">
+        <div class="row">
+            <div class="col-4">
                 <h1>Trackeo de mi salud</h1>
                 <label for="enterName">Ingresa tu nombre</label>
                 <input class="form-control" type="text" placeholder="Ingresa tu nombre"
                     aria-label="default input example" id="enterName" name="enterName" minlength="1" maxlength="10">
             </div>
-            <div class="row">
-                <div class="btn-group button-main col-4 btn-track" role="group">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="btn-group button-main col-6 btn-track" role="group">
                     <p class=" button-main__glucemia">Glucemia</p>
-                    <button type="button" class="btn btn-secondary button-main__child" id="glucemiaSi">SI</button>
-                    <button type="button" class="btn btn-secondary button-main__child" id="glucemiaNo">NO</button>
                 </div>
+                <button type="button" class="btn btn-secondary button-main__child" id="glucemiaSi">SI</button>
+                <button type="button" class="btn btn-secondary button-main__child" id="glucemiaNo">NO</button>
             </div>
-            <div class="row">
-                <div class="btn-group button-main col-4 btn-track" role="group">
+        </div>
+        <!-- de aca -->
+        <div class="row">
+            <div class="col-6">
+                <div class="btn-group button-main col-6 btn-track" role="group">
                     <p class=" button-main__presion">Presion</p>
-                    <button type="button" class="btn btn-secondary button-main__child" id="presionSi">SI</button>
-                    <button type="button" class="btn btn-secondary button-main__child" id="presionNo">NO</button>
                 </div>
+                <button type="button" class="btn btn-secondary button-main__child" id="presionSi">SI</button>
+                <button type="button" class="btn btn-secondary button-main__child" id="presionNo">NO</button>
             </div>
-            <div class="row">
-                <div class="btn-group button-main col-4 btn-track" role="group">
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="btn-group button-main col-6 btn-track" role="group">
                     <p class=" button-main__medicamentos">Medicamentos</p>
-                    <button type="button" class="btn btn-secondary button-main__child" id="medicamentosSi">SI</button>
-                    <button type="button" class="btn btn-secondary button-main__child" id="medicamentosNo">NO</button>
                 </div>
-                <div class="row">
-                    <div class="contador">
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="select">
-                            <option value="0">¿Cuantos?</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                    </div>
-                    <div class="row btn-accept">
-                        <div class="col-4">
-                            <button type="button" class="btn btn-primary btn-accept__element" id="accept">
-                                Aceptar </button>
-                        </div>
-                    </div>
+                <button type="button" class="btn btn-secondary button-main__child" id="medicamentosSi">SI</button>
+                <button type="button" class="btn btn-secondary button-main__child" id="medicamentosNo">NO</button>
+            </div>
+        </div>
+        hasta aca
+        <div class="row">
+            <div class="col-4">
+                <div class="contador">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="select">
+                        <option value="0">¿Cuantos?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
                 </div>
             </div>
+            <div class="row btn-accept">
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary btn-accept__element" id="accept">
+                        Aceptar </button>
+                </div>
+            </div>
+        </div>
+        </div>
         </div>
         <div class="historytracks">
             <h4 class="dia"></h4>
