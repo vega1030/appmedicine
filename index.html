@@ -12,15 +12,12 @@
 </head>
 
 <body>
+
     <!--Nav-bar-->
-    <header class="container">
-        <div class="logo-content">
-            <a href="index.html" class="logo">
-                <img src="img/cruz.svg" alt="" class="logo__element">
-            </a>
-        </div>
-        <nav class="navbar navbar-expand-sm navbar-light">
-            <div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-md">
+                <a class="navbar-brand" href="#"> <img src="img/cruz.svg" alt="" class="logo__element"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,72 +26,76 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#"></a>
+                        <a class="nav-link" href="#">Contact us</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-4">
+    <section class="container-md">
+        <div class="row-fluid">
+            <div class="col-md-6">
                 <h1>Trackeo de mi salud</h1>
+            </div>
+            <div class="col-md-6">
                 <label for="enterName">Ingresa tu nombre</label>
                 <input class="form-control" type="text" placeholder="Ingresa tu nombre"
                     aria-label="default input example" id="enterName" name="enterName" minlength="1" maxlength="10">
             </div>
         </div>
+        </div>
         <div class="row">
-            <div class="col-6">
-                <div class="btn-group button-main col-6 btn-track" role="group">
-                    <p class=" button-main__glucemia">Glucemia</p>
+            <div class="btn-group button-main col-md-6 btn-track" role="group">
+                <p class=" button-main__glucemia">Glucemia</p>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-secondary button-main__child" id="glucemiaSi">SI</button>
+                    <button type="button" class="btn btn-secondary button-main__child" id="glucemiaNo">NO</button>
                 </div>
-                <button type="button" class="btn btn-secondary button-main__child" id="glucemiaSi">SI</button>
-                <button type="button" class="btn btn-secondary button-main__child" id="glucemiaNo">NO</button>
+
             </div>
+        </div>
         </div>
         <!-- de aca -->
         <div class="row">
-            <div class="col-6">
-                <div class="btn-group button-main col-6 btn-track" role="group">
-                    <p class=" button-main__presion">Presion</p>
+            <div class="btn-group button-main col-md-6 btn-track" role="group">
+                <p class=" button-main__presion">Presion</p>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary button-main__child" id="presionSi">SI</button>
+                    <button type="button" class="btn btn-secondary button-main__child" id="presionNo">NO</button>
                 </div>
-                <button type="button" class="btn btn-secondary button-main__child" id="presionSi">SI</button>
-                <button type="button" class="btn btn-secondary button-main__child" id="presionNo">NO</button>
             </div>
         </div>
         </div>
         <div class="row">
-            <div class="col-6">
-                <div class="btn-group button-main col-6 btn-track" role="group">
-                    <p class=" button-main__medicamentos">Medicamentos</p>
+            <div class="btn-group button-main col-md-6 btn-track" role="group">
+                <p class=" button-main__medicamentos">Medicamentos</p>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary button-main__child" id="medicamentosSi">SI</button>
+                    <button type="button" class="btn btn-secondary button-main__child" id="medicamentosNo">NO</button>
                 </div>
-                <button type="button" class="btn btn-secondary button-main__child" id="medicamentosSi">SI</button>
-                <button type="button" class="btn btn-secondary button-main__child" id="medicamentosNo">NO</button>
             </div>
         </div>
-        hasta aca
         <div class="row">
-            <div class="col-4">
-                <div class="contador">
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="select">
-                        <option value="0">¿Cuantos?</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select>
-                </div>
+            <div class="col-md-4">
+                <select class="form-select form-select-md" aria-label=".form-select-sm example" id="select">
+                    <option value="0">¿Cuantos?</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
             </div>
-            <div class="row btn-accept">
-                <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-accept__element" id="accept">
-                        Aceptar </button>
-                </div>
+        </div>
+        <div class="row btn-accept">
+            <div class="col-1">
+                <button type="button" class="btn btn-primary btn-accept__element" id="accept">
+                    Aceptar </button>
             </div>
+        </div>
         </div>
         </div>
         </div>
@@ -105,10 +106,10 @@
     </section>
     <button type="button" class="btn btn-primary btn-accept__element" id="clearStorage">
         Reinicia tu sesion aqui </button>
-    <footer class="container">
+    <!-- <footer class="container">
 
         <q>La salud es la mayor posesión. La alegría es el mayor tesoro. La confianza es el mayor amigo (Lao Tzu)</q>
-    </footer>
+    </footer> -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

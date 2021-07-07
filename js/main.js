@@ -84,7 +84,7 @@ if (localStorage.getItem('reporteSemanal') === null) {
         let validate = localStorage.getItem("medicinetrue")
 
         if (name === "") {
-            alert('Debes colocar tu nombre').preventDefault()
+            alert('Debes colocar tu nombre')
             window.location.pathname = "/index.html"
         } else {
             if (validate === "true") {
@@ -101,20 +101,50 @@ if (localStorage.getItem('reporteSemanal') === null) {
     })
 }
 else {
-    let trackInfo = localStorage.getItem("reporteSemanal")
-    trackInfo = JSON.parse(trackInfo)
-    console.log(trackInfo.length)
-    for (i = 0; i < trackInfo.length; i++) {
+    function Info(presion, glucemia, medicamentos, colores, nombreMedicamentos) {
 
-        let { dia1 } = trackInfo
+        this.dia1 = {
+            'presion': presion,
+            'glucemia': glucemia
 
-        console.log(dia1)
+        };
+        this.writeHtml = (presion, glucemia) => {
+            let info = []
+            info.push(presion, glucemia)
+            let tagTitle = document.createElement('h4')
+            tagTitle.innerHTML = 'Dia ' + info
+            let tagH4 = contentRecord.appendChild(tagTitle)
+            return tagH4
+        }
+        let trackInfoPresion = localStorage.getItem("reporteSemanalPresion")
+        let trackInfoGlucemia = localStorage.getItem("reporteSemanalGlucemia")
+        // console.log(trackInfoPresion)
+        // console.log(trackInfoGlucemia)
+        // let info = []
+        // info.push(trackInfoPresion, trackInfoGlucemia)
+        // console.log(info)
+        // let tagTitle = document.createElement('h4')
+        // tagTitle.innerHTML = 'Dia ' + info
+        // let tagH4 = contentRecord.appendChild(tagTitle)
+        // console.log(tagH4)
 
-        let tagTitle = document.createElement('h4')
-        tagTitle.innerHTML = 'Dia ' + JSON.stringify(trackInfo.length)
-        let tagH4 = contentRecord.appendChild(tagTitle)
-
-        console.log(tagH4)
+        let infoDia1 = new Info(trackInfoPresion, trackInfoGlucemia)
+        console.log(infoDia1)
     }
 }
+//function filter
+    //parse of string to json
+
+
+
+
+    // for (i = 0; i < trackInfo.length; i++) {
+
+    //     let { dia1 } = trackInfo
+
+
+
+    //     console.log(tagH4)
+    // }
+
 

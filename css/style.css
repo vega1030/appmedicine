@@ -1,9 +1,10 @@
 /***Media Query***/
 @media only screen and (max-width: 1024px) {
   body {
-    background-color: rgba(48, 68, 78, 0.9);
+    background-color: rgba(176, 180, 182, 0.9);
     box-sizing: border-box;
     width: 100%;
+    height: 100%;
     color: rgb(54, 54, 54);
   }
   /** Header **/
@@ -42,14 +43,10 @@
   }
 
   /*** Section ***/
-  .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+
   section {
     width: 100%;
-    height: 40%;
+    height: 20%;
   }
   .button-main {
     float: right;
@@ -84,7 +81,7 @@
   /*** Footer ***/
   footer {
     background-color: aliceblue;
-    height: 80px;
+    height: 30%;
     width: 100%;
   }
   q {
@@ -119,75 +116,74 @@
 
 /* Desktop */
 
-* {
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-}
+@media only screen and (min-width: 1200px) {
+  * {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  width: 100%;
-  height: 100%;
-  background: rgb(175, 190, 175);
-}
-/*header*/
-header {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 5%;
-  height: 5%;
-}
-.logo-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 70px;
-  width: 45%;
-  margin: 0 auto;
-  padding: 0;
-}
-img {
-  width: 40%;
-}
-ul {
-  display: flex;
-  list-style-type: none;
-  width: 100%;
-  justify-content: flex-end;
-  height: 25%;
-  margin: 0;
-  padding: 0;
-}
-nav {
-  width: 40%;
-}
-/*  */
-/* Lista trackeo */
+  body {
+    width: 100%;
+    height: 100%;
+    background: rgb(175, 190, 175);
+  }
+  /*header*/
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+  }
+  .logo-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30%;
+    width: 45%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  img {
+    width: 40%;
+  }
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    height: 25%;
+  }
+  nav {
+    width: 50%;
+    background: rgb(175, 190, 175);
+  }
+  /*  */
+  /* Lista trackeo */
 
-.content-btn {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  margin: 6% 0 0 0;
-}
+  .content-btn {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 6% 0 0 0;
+  }
 
-.message {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .message {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.list-group {
-  margin: 4% 0 0 0;
-}
+  .list-group {
+    margin: 4% 0 0 0;
+  }
 
-.bg-light {
-  background-color: red;
+  .bg-light {
+    background-color: red;
+  }
 }
