@@ -144,42 +144,6 @@ let loadButton = document.querySelector('#loadValue').
 
         /******************************************************************************************/
 
-
-        //----validate input dates (be like integers and obligatory)----/
-
-        // switch (validatePresionList) {
-        //     case "true":
-
-        //         if (validatePresionList === validateGlucemiaList) {
-        //             //view of list 
-        //             const dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput;
-        //             const dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
-        //             glucemialista.style.display = "block"
-        //             listPresion.style.display = "block"
-        //             const packInfo = [presionInput, glucemiaInput]
-        //             sendInfoIndex(packInfo)
-        //         }
-
-        //         else {
-        //             dia1Presion = valorPresionContent.innerHTML = "Tu valor de presion es: " + presionInput;
-        //             listPresion.style.display = "block"
-        //             sendInfoIndex([presionInput])
-        //         }
-        //         break
-
-        //     case "false":
-
-        //         dia1Glucemia = valorGlucemiaContent.innerHTML = "Tu valor de glucemia es: " + glucemiaInput
-        //         glucemialista.style.display = "block"
-        //         sendInfoIndex([glucemiaInput])
-        //         console.log('el caso cero')
-        //         break
-
-        //     default:
-        //         console.log('el default')
-        //         alert("No hay valor para mostrar")
-        // }
-
         saveDates.style.display = "block"
         messageTrack.style.display = "none"
 
